@@ -45,6 +45,10 @@ mod imp;
 #[path = "windows.rs"]
 mod imp;
 
+#[cfg(target_arch = "valida")]
+#[path = "valida.rs"]
+mod imp;
+
 /// Extension methods for the standard `std::process::Child` type.
 pub trait ChildExt {
     /// Deprecated, use `wait_timeout` instead.
